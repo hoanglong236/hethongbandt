@@ -50,9 +50,7 @@ class AdminController extends Controller
 
     public function logout(Request $request)
     {
-        $request->session()->forget('ADMIN_LOGIN');
-        $request->session()->forget('ADMIN_ID');
-        $request->session()->forget('ADMIN_NAME');
+        $this->authService->logout();
 
         Session::flash('success_mess', 'Logout successfully');
         return redirect()->route('admin');
