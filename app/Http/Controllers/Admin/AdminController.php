@@ -45,7 +45,7 @@ class AdminController extends Controller
     public function dashboard(Request $request)
     {
         $admin_name = $request->session()->get('ADMIN_NAME');
-        return view('admin.dashboard', ['admin_name'=>$admin_name]);
+        return view('admin.dashboard', ['admin_name' => $admin_name]);
     }
 
     public function logout(Request $request)
@@ -58,11 +58,13 @@ class AdminController extends Controller
         return redirect()->route('admin');
     }
 
-    public function register(){
+    public function register()
+    {
         return view('admin.register');
     }
 
-    public function register_handle(Request $request){
+    public function register_handle(Request $request)
+    {
         $adminRegisterDTO = new AdminRegisterDTO();
 
         $adminRegisterDTO->email = $request->post('email');

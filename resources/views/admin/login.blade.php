@@ -26,18 +26,10 @@
                                 <input class="au-input au-input--full" type="password" name="password"
                                     placeholder="Password" required>
                             </div>
-                            {{-- <div class="login-checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember">Remember Me
-                                </label>
-                                <label>
-                                    <a href="#">Forgotten Password?</a>
-                                </label>
-                            </div> --}}
                             <div class="mt-4">
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign
+                                    in</button>
                             </div>
-
                             @if (session()->has('error_mess'))
                                 <div class="alert alert-danger" role="alert">
                                     {{ session('error_mess') }}
@@ -49,12 +41,6 @@
                                     </div>
                                 @endif
                             @endif
-                            {{-- <div class="social-login-content">
-                                    <div class="social-button">
-                                        <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
-                                        <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
-                                    </div>
-                                </div> --}}
                         </form>
                         <div class="register-link">
                             <p>
